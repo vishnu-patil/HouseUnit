@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+
+<body style="background-color: rgb(99, 177, 173);">
+    <center>
+        <h1> House Price Prediction In Unit Area </h1>
+        <form method="post" action="/house_price">
+            <!-- Headings for the form -->
+            <div class="headingsContainer">
+                <h3 style="color:rgb(197, 70, 165);">Get Your Dreame House Price In Single Click</h3>
+            </div>
+            
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+                <label for="transaction_date" style="color:rgb(54, 49, 48);">Transaction Date</label><br>
+                <input type="number" min="2012" max="2013" step="any"  style="width: 180px;" name="transaction_date" required>
+                <br><br>
+                <label for="house_age" style="color:rgb(78, 70, 69);">House Age</label><br>
+                <input type="number" min="3" max="49" step="any" style="width: 180px;" name="house_age" required>
+                <br><br>
+                <label for="distance_to_the_nearest_MRT_station" style="color:rgb(17, 16, 16);">Distance To The Nearest MRT Station</label><br>
+                <input type="number" min="3" max="12" step="any"  style="width: 180px;" name="distance_to_the_nearest_MRT_station" required>
+                <br><br>
+                <label for="number_of_convenience_stores" style="color:rgb(26, 23, 23);">Number of Convenience Stores</label><br>
+                <input type="number" min="1" max="10" step="any"  style="width: 180px;" name="number_of_convenience_stores" required>
+                <br><br>
+                <label for="latitude" style="color:rgb(37, 33, 33);">Latitude</label><br>
+                <input type="number" min="24" max="26" step="any"  style="width: 180px;" name="latitude" required>
+                <br><br>
+                <label for="longitude" style="color:rgb(19, 18, 18);">Longitude</label><br>
+                <input type="number" min="121" max="123" step="any" style="width: 180px;" name="longitude" required>
+                <br><br>
+                <!-- Submit button -->
+                <input type="submit" value="Submit">
+                <br><br>
+                <h3 style="color:black;">The House Price is <b> {{ prediction }}</b> Rs. Per Unit Area. </h3>
+            </div>
+        </form>
+    </center>
+
+</body>
+</html>
